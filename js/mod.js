@@ -80,7 +80,7 @@ var displayThings = [
 		}
 	},
 	function() {
-		return `powered by UKACD. <a href="../res/UKACD_license.txt">License Link</a>`
+		return `powered by UKACD. <a href="./res/UKACD_license.txt">License Link</a>`
 	}
 ]
 

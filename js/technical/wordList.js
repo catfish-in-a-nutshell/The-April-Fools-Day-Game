@@ -97,7 +97,7 @@ function precalcWeights() {
 }
 
 function init() {
-    $.get("../../res/UKACD.txt", function(data) {
+    $.get("../res/UKACD.txt", function(data) {
         all_words = data.split(/\r?\n|\r|\n/g);
         all_weights = Array(all_words.length)
         temp_weights = Array(all_words.length)
