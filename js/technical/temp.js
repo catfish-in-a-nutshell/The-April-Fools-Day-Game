@@ -85,6 +85,9 @@ function setupTempData(layerData, tmpData, funcsData) {
 				tmpData[item] = false
 			else
 				tmpData[item] = decimalOne // The safest thing to put probably?
+		} 
+		else if (isFunction(layerData[item]) && activeFunctions.includes(item)) {
+			// do nothing.
 		} else {
 			tmpData[item] = layerData[item]
 		}

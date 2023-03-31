@@ -597,6 +597,48 @@ function loadVue() {
 	`
 	})
 
+	Vue.component('word-list', {
+		props: ['layer', 'data'],
+		template: `
+			<div>
+				<div v-if="data.length > 0" id="word-list-all">
+					<div class="word-list-intro">You have got:</div>
+					<div class="word-list">
+						<div v-for="w in data" class="word word-list-entry">{{w}}</div>
+					</div>
+				</div>
+			</div>
+		`
+	})
+
+	Vue.component('slider-list', {
+		props: ['layer', 'data'],
+		template: `
+			<div class="slider-list-all">
+				<div v-for="d in data" class="slider-container">
+				<div v-if="hasUpgrade(layer, d['uid'])" class="slider-box">
+					<div class="slider-info" v-html="tmp[layer][d['info_f']]"></div>
+					<input type="range" v-model="player[layer][d['slider_v']]" :min="d['smin']" :max="d['smax']" :step="d['step']" class="slider-input">
+				</div>
+
+				<div v-else>
+					<upgrade :layer = "layer" :data = "d['uid']" v-bind:style="tmp[layer].componentStyles.upgrade"></upgrade>
+				</div>
+
+				</div>
+			</div>
+		`
+	})
+
+	Vue.component('switch-list', {
+		props: ['layer'],
+		template: `
+			<div class="switch-list-all">
+				<div class="slider-container">
+			</div>
+		`
+	})
+
 	// SYSTEM COMPONENTS
 	Vue.component('node-mark', systemComponents['node-mark'])
 	Vue.component('tab-buttons', systemComponents['tab-buttons'])

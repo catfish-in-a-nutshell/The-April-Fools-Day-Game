@@ -22,7 +22,7 @@ function startPlayerBase() {
 		points: modInfo.initialStartPoints,
 		subtabs: {},
 		lastSafeTab: (readData(layoutInfo.showTree) ? "none" : layoutInfo.startTab)
-	};
+	}
 }
 function getStartPlayer() {
 	playerdata = startPlayerBase();
