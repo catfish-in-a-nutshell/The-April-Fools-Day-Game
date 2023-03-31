@@ -166,7 +166,7 @@ addLayer("p", {
         },
         13: {
             fullDisplay: () => {
-                return `Shakespeare<br><br> Req: Get <u>There is a tide in the affairs of men, which, taken at the flood, leads on to fortune</u>)}`
+                return `Shakespeare<br><br> Req: Get <u>There is a tide in the affairs of men, which, taken at the flood, leads on to fortune</u>`
             },
             unlocked: () => hasUpgrade("p", 12),
             canAfford: () => tmp.p.canAffordU13 === true
@@ -194,7 +194,7 @@ addLayer("p", {
         },
         23: {
             fullDisplay: () => {
-                return `How does that count as a word <br><br> Req: Get a word that contains at least 4 <u>a</u> s`
+                return `How does that count as a word <br><br> Req: Get a word that contains at least 4 <u>a</u> s (as a word, not a letter)`
             },
             unlocked: () => tmp.p.rightUnlocked,
             canAfford: () => tmp.p.canAffordU23 === true
